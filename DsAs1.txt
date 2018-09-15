@@ -1,0 +1,106 @@
+Question-1
+import java.util.*;
+public class palindrom{
+	public static boolean checkPalin(String str)
+	{
+		int len = str.length()-1;
+		char x[]= str.toCharArray();
+		int flag=0;
+		for(int i = 0;i < str.length()/2;i++){
+			if(x[i]!=x[l--]){
+				flag = 1;
+				break;
+			}
+		}
+		if(flag == 0) return true;
+		else  return false;
+	}
+	public static void main(String[] ar){
+		Scanner s = new Scanner(System.in);
+		String str = s.nextLine();
+		boolean c = checkPalin(str);
+		System.out.println(c+"");
+		
+	}
+}
+
+
+solution-2
+
+import java.util.*;
+class toggle{
+   static Scanner s = new Scanner(System.in);
+   public static String toggleStr(String str)
+   {
+    char a[] = str.toCharArray();
+      for(int i = 0; i < a.length; i++){
+          if(Character.isUpperCase(a[i])){
+                a[i] = Character.toLowerCase(a[i]);
+             }
+             else
+               a[i] = Character.toUpperCase(a[i]);
+          }
+        String st=new String(a);
+        return st;
+   }
+   public static void main(String args[]){
+      String str = s.nextLine();
+      String st = toggleStr(str);
+      System.out.println(st);
+       }
+}
+
+
+slotution-3
+
+
+mport java.util.*;
+public class freq{
+  public static char highFreq(String str)
+  {
+    char c[]=str.toCharArray();
+    int max=-1,k=0;
+    int c1[]=new int[c.length];
+         for(int i=0;i<c.length;i++){
+          for(int j=i+1;j<c.length;j++){
+            if(c[i]==c[j])
+                c1[i]+=1;
+               }
+             if(max<c1[i]){
+                  max=c1[i];
+                  k=i;
+                 }
+              }
+          return c[k];
+    
+  }
+	public static void main(String[] ar){
+		Scanner s=new Scanner(System.in);
+		String str=s.nextLine();
+    char high = highFreq(str);
+    System.out.println("Highest frequency is of "+high);
+	}
+}
+
+
+
+solution-4
+
+
+import java.util.Scanner;
+class subseq{
+     static Scanner sc=new Scanner(System.in);
+     static void seq(String str,String str2){
+      if(str2.length()<0)
+      return;
+       System.out.println(str);
+      for(int i=0;i<str2.length();i++)
+       seq(str+str2.charAt(i),str2.substring(i+1,str2.length()));
+  }
+        public static void main (String args[]){
+        String st=sc.nextLine();
+          seq("",st);
+          }
+        }
+
+
