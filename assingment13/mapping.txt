@@ -1,0 +1,24 @@
+import java.util.*;
+class mapping{
+    public static void main(String []args)
+  {
+    int a;
+    HashMap hm=new HashMap();
+    hm.put("Priyesh",1);
+    hm.put("Neeraj",2);
+    hm.put("Aman",3);
+    hm.put("Anmol",4);
+    hm.put("Priyanshu",5);
+    Set set=hm.entrySet();
+    Iterator it=set.iterator();
+    System.out.println("Elements and keys:");
+    while(it.hasNext())
+    {
+      Map.Entry mr=(Map.Entry)it.next();
+     System.out.print(mr.getKey()+" : ");
+     System.out.println(mr.getValue());
+
+    }
+
+  }
+}
